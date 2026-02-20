@@ -23,9 +23,20 @@
   <nav class="topbar">
     <div class="container">
       <div class="d-flex justify-content-between w-100">
-        <span><i class="bi bi-envelope"></i> sekretariat@anindya.co.id | <i class="bi bi-telephone"></i> (0274)
-          451034</span>
-        <span><i class="bi bi-clock"></i> Senin – Jumat : 08.00 – 16.00 WIB</span>
+        <span class="contact-info">
+          <i class="bi bi-envelope icon-circle"></i>
+          sekretariat@anindya.co.id
+
+          <span class="divider">|</span>
+
+          <i class="bi bi-telephone icon-circle"></i>
+          (0274) 451034
+        </span>
+
+        <span>
+          <i class="bi bi-clock"></i>
+          Senin – Jumat : <span style="font-weight: bold;">08.00 – 16.00 WIB </span>
+        </span>
       </div>
     </div>
   </nav>
@@ -35,7 +46,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold" style="color: #fff;">
         <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40" class="me-2">
-        PPID PT AMI
+        <span style="font-size: 22px;">PPID PT AMI</span>
       </a>
 
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -100,11 +111,12 @@
     </div>
   </nav>
 
+
   <!-- ================= CONTENT ================= -->
   <section class="page-header mb-4">
     <div class="container">
-      <h2 class="fw-bold text-dark-primary">Regulasi</h2>
-      <p class="text-muted">
+      <h2 class="page-title">Regulasi</h2>
+      <p class="page-subtitle">
         Kumpulan peraturan perundang-undangan dan dokumen regulasi keterbukaan informasi publik.
       </p>
     </div>
@@ -116,7 +128,7 @@
       <!-- SEARCH -->
       <div class="card shadow-sm mb-4">
         <div class="card-body">
-          <input type="text" class="form-control"
+          <input type="text" class="form-control" style="font-style: italic"
             placeholder="Cari regulasi berdasarkan judul, nomor, atau deskripsi...">
         </div>
       </div>
@@ -125,47 +137,52 @@
       <div class="card shadow-sm mb-4">
         <div class="card-body">
 
-          <h6 class="fw-bold mb-3">Filter Regulasi</h6>
+          <h6 class="fw-bold mb-3" style="color: #1f3c88;">Filter Regulasi</h6>
 
           <div class="row">
+
+            <!-- Filter Tahun -->
             <div class="col-md-6 mb-3">
-              <label class="form-label fw-semibold">Tahun</label>
-              <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-warning btn-sm">Semua</button>
-                <button class="btn btn-light btn-sm">2026</button>
-                <button class="btn btn-light btn-sm">2025</button>
-                <button class="btn btn-light btn-sm">2024</button>
-                <button class="btn btn-light btn-sm">2023</button>
-              </div>
+              <label class="form-label fw-semibold" style="color: #1f3c88;">Tahun</label>
+              <select class="form-select filter-dropdown" id="filterTahun">
+                <option value="all">Semua Tahun</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+              </select>
             </div>
 
+            <!-- Filter Jenis -->
             <div class="col-md-6 mb-3">
-              <label class="form-label fw-semibold">Jenis Regulasi</label>
-              <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-primary btn-sm">Semua Jenis</button>
-                <button class="btn btn-light btn-sm">Undang-Undang</button>
-                <button class="btn btn-light btn-sm">Peraturan Pemerintah</button>
-                <button class="btn btn-light btn-sm">Keputusan Direksi</button>
-                <button class="btn btn-light btn-sm">SOP</button>
-              </div>
+              <label class="form-label fw-semibold" style="color: #2a5298;">Jenis Regulasi</label>
+              <select class="form-select filter-dropdown" id="filterJenis">
+                <option value="all">Semua Jenis</option>
+                <option value="Undang-Undang">Undang-Undang</option>
+                <option value="Peraturan Pemerintah">Peraturan Pemerintah</option>
+                <option value="Keputusan Direksi">Keputusan Direksi</option>
+                <option value="SOP">SOP</option>
+              </select>
             </div>
+
           </div>
 
         </div>
       </div>
+
 
       <!-- TABLE -->
       <div class="card shadow-sm">
         <div class="card-body p-0">
 
           <table class="table align-middle mb-0">
-            <thead class="table-primary">
+            <thead>
               <tr>
-                <th>No. Regulasi</th>
-                <th>Judul & Deskripsi</th>
-                <th>Jenis</th>
-                <th>Tahun</th>
-                <th>Aksi</th>
+                <th style="width: 12%;">No. Regulasi</th>
+                <th style="width: 35%;">Judul & Deskripsi</th>
+                <th style="width: 15%;">Jenis</th>
+                <th style="width: 10%;">Tahun</th>
+                <th style="width: 18%;">Aksi</th>
               </tr>
             </thead>
 
@@ -226,32 +243,38 @@
         <div class="col-lg-3 col-md-6">
           <div class="d-flex align-items-center mb-3">
             <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40">
-            <h5 class="mb-0">PPID PT AMI</h5>
+            <h5 class="mb-0" style="padding-left: 4%;">PPID PT AMI</h5>
           </div>
           <p class="text-white-50 small">
             Pejabat Pengelola Informasi dan Dokumentasi PT Anindya Mitra
             Internasional berkomitmen memberikan layanan informasi publik
             yang transparan, akuntabel, dan profesional.
           </p>
-          <div class="d-flex justify-content gap-3">
-            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white fs-4"
-              title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white fs-4"
-              title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X"
-              style="display: flex; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16">
+          <div class="social-icons d-flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white"
+              title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.055-4.425 5.055H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
               </svg>
             </a>
-            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white fs-4"
-              title="TikTok"><i class="bi bi-tiktok"></i></a>
+
+            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
           </div>
+
         </div>
         <!-- MENU -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 7%;">
           <h6>Menu</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html">Beranda</a></li>
@@ -263,7 +286,7 @@
           </ul>
         </div>
         <!-- LAYANAN -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 2%;">
           <h6>Layanan</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="permohonan-informasi.html">Permohonan Informasi</a></li>
@@ -298,6 +321,35 @@
     </div>
   </footer>
 
+
+  <div class="modal fade detail-modal" id="detailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalTitle">Detail Dokumen</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span id="modalCategory" class="badge bg-danger">Kategori</span>
+            <span id="modalDate" class="badge bg-warning text-dark">Tahun</span>
+          </div>
+          <div class="ratio ratio-16x9 mb-3 border bg-light" style="height: 500px;">
+            <iframe src="" id="documentPreview" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h6 class="fw-bold text-dark">Deskripsi/Ringkasan:</h6>
+          <p id="modalDescription" class="text-muted small">Informasi detail akan muncul di sini.</p>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+          <a href="" id="modalDownloadExternal" class="btn btn-warning btn-sm text-dark fw-bold" download>
+            <i class="bi bi-download"></i> Unduh Dokumen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== SCROLL TO TOP ===== -->
   <button class="scroll-to-top" id="scrollToTop">
     <i class="bi bi-arrow-up"></i>
@@ -322,33 +374,6 @@
   </script>
 
 </body>
-<div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0 shadow">
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title fw-bold" id="modalTitle">Detail Dokumen</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <span id="modalCategory" class="badge bg-danger">Kategori</span>
-          <span id="modalDate" class="badge bg-warning text-dark">Tahun</span>
-        </div>
-        <div class="ratio ratio-16x9 mb-3 border bg-light" style="height: 500px;">
-          <iframe src="" id="documentPreview" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <h6 class="fw-bold text-dark">Deskripsi/Ringkasan:</h6>
-        <p id="modalDescription" class="text-muted small">Informasi detail akan muncul di sini.</p>
-      </div>
-      <div class="modal-footer bg-light">
-        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
-        <a href="" id="modalDownloadExternal" class="btn btn-warning btn-sm text-dark fw-bold" download>
-          <i class="bi bi-download"></i> Unduh Dokumen
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const detailModalEl = document.getElementById('detailModal');
