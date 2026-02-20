@@ -1,6 +1,59 @@
 /* =====================================================
-   1. RESET & BASE
+   PPID PT ANINDYA MITRA INTERNASIONAL
+   Organized CSS - Grouped by Section & Function
 ===================================================== */
+
+/* ================= TABLE OF CONTENTS =================
+   1. GLOBAL / BASE STYLES
+      - Reset & Base
+      - Typography  
+      - Layout / Container / Section
+      - Utilities
+      - Responsive (Global)
+   
+   2. SHARED COMPONENTS
+      - Header (Topbar, Navbar)
+      - Footer
+      - Buttons
+      - Cards Components
+      - Breadcrumb / Page Header
+      - Scroll to Top
+      - Modal
+   
+   3. HOME / INDEX PAGE
+      - Hero / Carousel
+      - Kategori Grid
+      - Statistik Grid
+   
+   4. PROFIL PPID PAGES
+      - Visi & Misi Page
+      - Struktur Organisasi
+      - Tugas & Wewenang
+      - Profil PPID Page
+   
+   5. INFORMASI PUBLIK PAGES
+      - Informasi Berkala
+      - Serta Merta
+      - Setiap Saat
+      - Sidebar & Filter
+   
+   6. LAYANAN INFORMASI PAGES
+      - Layanan Informasi
+      - Permohonan Informasi
+      - Pengajuan Keberatan
+   
+   7. OTHER PAGES
+      - Kontak Page
+      - Statistik Page
+      - Regulasi
+      - FAQ
+   ==================================================== */
+
+/* =====================================================
+   BAGIAN 1: GLOBAL / BASE STYLES
+===================================================== */
+
+/* --- 1.1 Reset & Base --- */
 * {
   margin: 0;
   padding: 0;
@@ -14,15 +67,8 @@ body {
   background: #f8f9fa;
 }
 
-/* =====================================================
-   2. TYPOGRAPHY
-===================================================== */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* --- 1.2 Typography --- */
+h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
 }
@@ -39,9 +85,7 @@ h6 {
   font-size: 1.125rem;
 }
 
-/* =====================================================
-   3. LAYOUT / CONTAINER / SECTION
-===================================================== */
+/* --- 1.3 Layout / Container / Section --- */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -51,17 +95,73 @@ h6 {
 .section {
   padding: 40px 0;
 }
+
 .section-sm {
   padding: 25px 0;
 }
 
+/* --- 1.4 Utilities --- */
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-primary {
+  background: #1f3c88;
+}
+
+.bg-secondary {
+  background: #0d2b6b;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.text-purple {
+  color: #7a4dd8 !important;
+}
+
+/* --- 1.5 Global Responsive --- */
+@media (max-width: 992px) {
+  .kategori-grid,
+  .statistik-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .kategori-grid,
+  .statistik-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-slide {
+    height: 55vh;
+  }
+}
+
 /* =====================================================
-   4. HEADER AREA
-   - Topbar
-   - Navbar
+   BAGIAN 2: SHARED COMPONENTS
 ===================================================== */
 
-/* ---------- Topbar ---------- */
+/* --- 2.1 Header Area --- */
+/* Topbar */
 .topbar {
   background: #1f3c88;
   color: #fff;
@@ -79,7 +179,31 @@ h6 {
   font-weight: 500;
 }
 
-/* ---------- Navbar ---------- */
+.topbar .contact-info {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.topbar .contact-info i.icon-circle {
+  background-color: #ffffff !important;
+  color: #2a5298 !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  margin-right: 8px !important;
+}
+
+.topbar .divider {
+  margin: 0 20px !important;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Navbar */
 .navbar {
   background: #0d2b6b;
   padding: 0.875rem 0;
@@ -111,42 +235,181 @@ h6 {
   color: #d4a537;
 }
 
-/* =====================================================
-   5. HERO / CAROUSEL
-===================================================== */
-.hero-slide {
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+.dropdown-menu .dropdown-item {
+  font-weight: 400;
+  transition: 0.2s ease;
 }
 
-.hero-slide::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(31, 60, 136, 0.7);
+.navbar .dropdown-menu .dropdown-item:hover {
+  font-weight: 700 !important;
 }
 
-.carousel-caption {
-  z-index: 2;
-  bottom: 18%;
+/* --- 2.2 Footer Area --- */
+footer {
+  background: #0d2b6b;
+  color: #fff;
+  padding-top: 40px;
 }
 
-.carousel-caption h1 {
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin-bottom: 0.875rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.carousel-caption p {
-  font-size: 1.125rem;
+.footer-grid > div {
+  flex: 1 1 200px;
 }
 
-/* =====================================================
-   6. CARD COMPONENT
-===================================================== */
+footer h6 {
+  color: #d4a537;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+footer a {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* Social Icons */
+.social-icons i {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* --- 2.3 Buttons --- */
+.btn-ppid {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-ppid-primary {
+  background: #d4a537;
+  color: #fff;
+}
+
+.btn-ppid-primary:hover {
+  background: #b8942f;
+}
+
+.btn-ppid-outline {
+  border: 1px solid #d4a537;
+  color: #d4a537;
+  background: transparent;
+}
+
+.btn-ppid-outline:hover {
+  background: #d4a537;
+  color: #fff;
+}
+
+.btn-kirim {
+  background-color: #1f3c88;
+  border-color: #1f3c88;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-kirim:hover {
+  background-color: #2250b5;
+  border-color: #2250b5;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background: #c89b3c;
+  color: #fff;
+}
+
+.btn-gold:hover {
+  background: #b78a2f;
+  color: #fff;
+}
+
+.btn-lihat {
+  border-color: #2a5298 !important;
+  color: #2a5298 !important;
+}
+
+.btn-lihat:hover {
+  background-color: #2a5298 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-warning {
+  border-color: #b68a2a !important;
+  color: #b68a2a !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: #b68a2a !important;
+  color: #ffffff !important;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+  background: #d4a537;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+}
+
+.btn-cta-primary:hover {
+  background: #b8942f;
+  color: #fff;
+}
+
+.btn-cta-outline {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+}
+
+.btn-cta-outline:hover {
+  background: #fff;
+  color: #1f3c88;
+}
+
+/* --- 2.4 Cards Components --- */
 .card-ppid {
   background: #fff;
   border-radius: 10px;
@@ -188,186 +451,67 @@ h6 {
   border-radius: 10px 10px 0 0;
 }
 
-/* ---------- Card Variants ---------- */
+/* Card Variants */
 .card-primary {
   background: linear-gradient(135deg, #eef3ff, #d1e7ff);
 }
+
 .card-warning {
   background: linear-gradient(135deg, #fff7e6, #faf1d1);
 }
+
 .card-success {
   background: linear-gradient(135deg, #ecfdf3, #d1fae5);
 }
+
 .card-info {
   background: linear-gradient(135deg, #f6efff, #e9d5ff);
 }
 
-/* =====================================================
-   7. BUTTONS
-===================================================== */
-.btn-ppid {
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.875rem;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
+/* Section Card (Universal Card Modern) */
+.section-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
 }
 
-.btn-ppid-primary {
+.section-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.section-card[style*="linear-gradient"] {
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.section-card[style*="linear-gradient"] .btn {
   background: #d4a537;
-  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
 }
 
-.btn-ppid-primary:hover {
+.section-card[style*="linear-gradient"] .btn:hover {
   background: #b8942f;
 }
 
-.btn-ppid-outline {
-  border: 1px solid #d4a537;
-  color: #d4a537;
-  background: transparent;
+.section-card.text-center i {
+  transition: 0.3s;
 }
 
-.btn-ppid-outline:hover {
-  background: #d4a537;
-  color: #fff;
+.section-card.text-center:hover i {
+  transform: scale(1.1);
 }
 
-/* =====================================================
-   8. GRID SECTION (Kategori & Statistik)
-===================================================== */
-.kategori-grid,
-.statistik-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  align-items: stretch;
-}
-
-/* =====================================================
-   9. FOOTER AREA
-===================================================== */
-footer {
-  background: #0d2b6b;
-  color: #fff;
-  padding-top: 40px;
-}
-
-/* Grid Footer */
-.footer-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.footer-grid > div {
-  flex: 1 1 200px;
-}
-
-footer h6 {
-  color: #d4a537;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-footer a {
-  color: #fff;
-  opacity: 0.8;
-  text-decoration: none;
-}
-
-footer a:hover {
-  opacity: 1;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 0;
-  font-size: 0.875rem;
-  opacity: 0.7;
-}
-
-/* =====================================================
-   10. SCROLL TO TOP
-===================================================== */
-.scroll-to-top {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: #1f3c88;
-  color: #fff;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.scroll-to-top.show {
-  display: flex;
-}
-
-/* =====================================================
-   11. RESPONSIVE
-===================================================== */
-@media (max-width: 992px) {
-  .kategori-grid,
-  .statistik-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section-title {
-    font-size: 1.875rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .kategori-grid,
-  .statistik-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-slide {
-    height: 55vh;
-  }
-}
-
-/* =====================================================
-   12. UTILITIES
-===================================================== */
-.text-center {
-  text-align: center;
-}
-.text-white {
-  color: #fff;
-}
-.bg-primary {
-  background: #1f3c88;
-}
-.bg-secondary {
-  background: #0d2b6b;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-.mt-3 {
-  margin-top: 0.75rem;
-}
-.small {
-  font-size: 0.875rem;
-}
-
-/* =====================================================
-   13. BREADCRUMB / PAGE HEADER
-===================================================== */
+/* --- 2.5 Breadcrumb / Page Header --- */
 .page-header {
   background: #f1f4f9;
   border-bottom: 1px solid #e5e9f2;
+  padding: 1.25rem 0;
 }
 
 .breadcrumb {
@@ -392,7 +536,7 @@ footer a:hover {
   color: #1f3c88;
 }
 
-/* ================= BREADCRUMB MODERN ================= */
+/* Modern Breadcrumb */
 .custom-breadcrumb {
   background: #ffffff;
   padding: 10px 18px;
@@ -416,166 +560,276 @@ footer a:hover {
   font-weight: 600;
 }
 
-/* separator custom */
 .breadcrumb-item + .breadcrumb-item::before {
   content: "›";
   color: #999;
 }
 
-/* =====================================================
-   14. CONTENT BOX / PANEL
-===================================================== */
-.content-box {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-  margin-bottom: 1.5rem;
+/* Breadcrumb PPID Uniform */
+.breadcrumb-ppid {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
 }
 
-.content-box h4 {
+.breadcrumb-ppid a {
   color: #1f3c88;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.content-box p {
-  font-size: 0.95rem;
+.breadcrumb-ppid span {
+  color: #6c757d;
+}
+
+/* --- 2.6 Scroll to Top --- */
+.scroll-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #1f3c88;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.scroll-to-top.show {
+  display: flex;
+}
+
+/* --- 2.7 Modal Styling --- */
+.detail-modal .modal-header {
+  background: #1f3c88;
+  color: #fff;
+  border-bottom: none;
+}
+
+.detail-modal .modal-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.detail-modal .btn-close {
+  filter: invert(1);
+}
+
+.detail-modal .modal-body {
+  padding: 1.5rem;
+}
+
+.detail-modal .modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.detail-modal .info-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.detail-modal .info-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.detail-modal .description-text {
+  line-height: 1.7;
   color: #555;
 }
 
-/* Highlight info */
-.info-highlight {
-  display: flex;
-  gap: 1rem;
-  background: #fdf8ee;
-  border-left: 5px solid #d4a537;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-.info-highlight i {
-  font-size: 1.5rem;
-  color: #d4a537;
-}
-
-/* =====================================================
-   15. PERAN & TUJUAN
-===================================================== */
-.box-peran {
-  background: #eef4ff;
-  border: 1px solid #d1e2ff;
-  border-radius: 10px;
-  padding: 1.25rem;
-  height: 100%;
-}
-
-.box-tujuan {
-  background: #fff7e6;
-  border: 1px solid #f1e0b8;
-  border-radius: 10px;
-  padding: 1.25rem;
-  height: 100%;
-}
-
-.list-icon {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.list-icon li {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.list-icon i {
-  color: #1f3c88;
-}
-
-/* =====================================================
-   16. RUANG LINGKUP
-===================================================== */
-.scope-card {
-  background: #eef4ff;
-  border-radius: 10px;
-  padding: 1.25rem;
-  text-align: center;
-  border: 1px solid #d1e2ff;
-}
-
-.scope-card.warning {
-  background: #fff7e6;
-  border-color: #f1e0b8;
-}
-
-.scope-card h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1f3c88;
-}
-
-.scope-card p {
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-/* =====================================================
-   17. UNIT USAHA
-===================================================== */
-.unit-wrapper {
-  background: #f8fbff;
-  border-radius: 10px;
-  border-left: 5px solid #1f3c88;
-  padding: 1.5rem;
-}
-
-.unit-item {
-  background: #fff;
-  border: 1px solid #e5e9f2;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: start;
-}
-
-.unit-item i {
-  color: #d4a537;
-}
-
-/* =====================================================
-   18. CTA PROFIL PPID
-===================================================== */
-
-.cta-ppid {
-  background: linear-gradient(135deg, #1f3c88, #0d2b6b);
+.detail-modal .download-btn {
+  background: #1f3c88;
   color: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  display: flex;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.cta-ppid p {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.cta-ppid .btn {
+.detail-modal .download-btn:hover {
   background: #d4a537;
   color: #fff;
-  font-weight: 600;
-  border-radius: 6px;
-} /* =====================================================
-   CTA VISI MISI (SESUI DESAIN UI)
+}
+
+.detail-modal .modal-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.detail-modal .modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+}
+
+.detail-modal .modal.show .modal-dialog {
+  transform: translate(0, 0);
+}
+
+/* --- 2.8 Icon Circle --- */
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #d4a537;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.kontak-item,
+.info-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+/* --- 2.9 Table Styles --- */
+.table thead {
+  background-color: #1f3c88 !important;
+}
+
+.table thead th {
+  background-color: #1f3c88 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  vertical-align: middle;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table td:nth-child(3),
+.table td:nth-child(4),
+.table td:nth-child(5) {
+  text-align: center;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  width: 18%;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  width: 15%;
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 10%;
+}
+
+.table th:nth-child(5),
+.table td:nth-child(5) {
+  width: 17%;
+}
+
+.table td:nth-child(5) {
+  white-space: nowrap;
+}
+
+.card {
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th:first-child {
+  border-top-left-radius: 14px;
+}
+
+.table thead th:last-child {
+  border-top-right-radius: 14px;
+}
+
+.card.shadow-sm {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* =====================================================
+   BAGIAN 3: HOME / INDEX PAGE
 ===================================================== */
 
+/* --- 3.1 Hero / Carousel --- */
+.hero-slide {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 60, 136, 0.7);
+}
+
+.carousel-caption {
+  z-index: 2;
+  bottom: 18%;
+}
+
+.carousel-caption h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 0.875rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  font-size: 1.125rem;
+}
+
+/* --- 3.2 Kategori Grid --- */
+.kategori-grid,
+.statistik-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* --- 3.3 Statistik Grid (Home) --- */
+.statistik-grid .card-ppid.bg-info {
+  background: linear-gradient(135deg, #1f3c88, #0d2b6b);
+}
+
+.statistik-grid .card-ppid.bg-success {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.statistik-grid .card-ppid.bg-warning {
+  background: linear-gradient(135deg, #f0ad4e, #d9902a);
+}
+
+/* =====================================================
+   BAGIAN 4: PROFIL PPID PAGES
+===================================================== */
+
+/* --- 4.1 Visi & Misi Page --- */
 .cta-visi-misi-ui {
   background: linear-gradient(135deg, #1f3c88, #0d2b6b);
   border-radius: 12px;
@@ -597,46 +851,7 @@ footer a:hover {
   opacity: 0.9;
 }
 
-/* Buttons */
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-cta-primary {
-  background: #d4a537;
-  color: #fff;
-  font-weight: 600;
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-}
-
-.btn-cta-primary:hover {
-  background: #b8942f;
-  color: #fff;
-}
-
-.btn-cta-outline {
-  border: 1px solid #fff;
-  color: #fff;
-  background: transparent;
-  font-weight: 600;
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-}
-
-.btn-cta-outline:hover {
-  background: #fff;
-  color: #1f3c88;
-}
-
-/* =====================================================
-   19. VISI & MISI PAGE FIX
-===================================================== */
-
-/* ---------- Card Wrapper ---------- */
+/* Card Wrapper */
 .card-content {
   background: #fff;
   padding: 2rem;
@@ -644,7 +859,7 @@ footer a:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* ---------- Judul Konten ---------- */
+/* Judul Konten */
 .content-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -655,7 +870,7 @@ footer a:hover {
   gap: 8px;
 }
 
-/* ---------- Visi Box ---------- */
+/* Visi Box */
 .visi-box {
   background: linear-gradient(135deg, #1f3c88, #0d2b6b);
   color: #fff;
@@ -668,7 +883,7 @@ footer a:hover {
   font-size: 0.95rem;
 }
 
-/* ---------- Makna Visi ---------- */
+/* Makna Visi */
 .makna-visi {
   background: #f8fbff;
   border-left: 4px solid #1f3c88;
@@ -683,7 +898,7 @@ footer a:hover {
   margin-bottom: 0.25rem;
 }
 
-/* ---------- Misi List ---------- */
+/* Misi List */
 .misi-list {
   display: flex;
   flex-direction: column;
@@ -715,10 +930,7 @@ footer a:hover {
   font-weight: 600;
 }
 
-/* =====================================================
-   20. NILAI PPID
-===================================================== */
-
+/* --- 4.2 Nilai PPID --- */
 .nilai-card {
   height: 100%;
   background: #fff;
@@ -749,10 +961,7 @@ footer a:hover {
   margin: 0;
 }
 
-/* =====================================================
-   21. STRATEGI IMPLEMENTASI
-===================================================== */
-
+/* --- 4.3 Strategi Implementasi --- */
 .strategi-box {
   background: #f8f9fa;
   padding: 2rem;
@@ -776,299 +985,7 @@ footer a:hover {
   margin-bottom: 0.35rem;
 }
 
-/* =====================================================
-   23. RESPONSIVE VISI MISI
-===================================================== */
-@media (max-width: 768px) {
-  .visi-box {
-    min-height: auto;
-    padding: 1.25rem;
-  }
-
-  .card-content {
-    padding: 1.5rem;
-  }
-}
-@media (max-width: 576px) {
-  .cta-visi-misi-ui {
-    padding: 2rem 1.25rem;
-  }
-
-  .cta-visi-misi-ui h4 {
-    font-size: 1.2rem;
-  }
-}
-
-/* =====================================================
-   24. GLOBAL BREADCRUMB (SERAGAM)
-===================================================== */
-
-.page-header {
-  background: #f1f4f9;
-  border-bottom: 1px solid #e5e9f2;
-  padding: 1.25rem 0;
-}
-
-.breadcrumb-ppid {
-  font-size: 0.875rem;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #6c757d;
-  margin-bottom: 0.5rem;
-}
-
-.breadcrumb-ppid a {
-  color: #1f3c88;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.breadcrumb-ppid span {
-  color: #6c757d;
-}
-
-.page-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1f3c88;
-}
-/* =====================================================
-   INFORMASI PUBLIK PAGE
-===================================================== */
-
-.filter-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.filter-btn {
-  background: #f1f4f9;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-align: left;
-  font-size: 0.875rem;
-  cursor: pointer;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-  background: #d4a537;
-  color: #fff;
-}
-
-.stat-box {
-  background: #1f3c88;
-  color: #fff;
-  padding: 1.25rem;
-  border-radius: 10px;
-}
-
-.stat-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.stat-box li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 0.875rem;
-}
-
-/* Tabs */
-.info-tabs {
-  display: flex;
-  gap: 1rem;
-  border-bottom: 2px solid #eee;
-}
-
-.info-tabs a {
-  padding: 8px 12px;
-  text-decoration: none;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.info-tabs a.active {
-  color: #1f3c88;
-  border-bottom: 3px solid #d4a537;
-}
-
-/* Table Style */
-.info-table {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.info-row:last-child {
-  border-bottom: none;
-}
-
-.info-title h6 {
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.download-count {
-  font-size: 0.75rem;
-  color: #6c757d;
-}
-
-.info-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.875rem;
-}
-
-.info-action i {
-  cursor: pointer;
-  margin-left: 6px;
-  color: #1f3c88;
-}
-/* ================= SIDEBAR ================= */
-
-.sidebar-card {
-  background: #fff;
-  padding: 1.25rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.25rem;
-}
-
-.sidebar-card h6 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #1f3c88;
-}
-
-/* Filter Button */
-.filter-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.filter-btn {
-  background: #f1f4f9;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 6px;
-  text-align: left;
-  font-size: 0.85rem;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-  background: #d4a537;
-  color: #fff;
-}
-
-/* Statistik Card */
-.statistik-card {
-  background: #1f3c88;
-  color: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-}
-
-.statistik-card h6 {
-  margin-bottom: 1rem;
-}
-
-.stat-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-}
-
-/* ================= TABS ================= */
-
-.info-tabs {
-  display: flex;
-  gap: 2rem;
-  border-bottom: 2px solid #eee;
-  margin-bottom: 1.5rem;
-}
-
-.info-tabs a {
-  padding-bottom: 8px;
-  text-decoration: none;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.info-tabs a.active {
-  color: #1f3c88;
-  border-bottom: 3px solid #d4a537;
-}
-
-/* ================= TABLE ================= */
-
-.info-table {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-}
-
-.info-header {
-  background: #1f3c88;
-  color: #fff;
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
-  padding: 1rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.info-row {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
-  align-items: center;
-  font-size: 0.9rem;
-}
-
-.info-row h6 {
-  margin-bottom: 4px;
-  font-weight: 600;
-}
-
-.download-count {
-  font-size: 0.75rem;
-  color: #6c757d;
-}
-
-.aksi i {
-  cursor: pointer;
-  margin-right: 8px;
-  color: #1f3c88;
-}
-
-.aksi i:hover {
-  color: #d4a537;
-}
-/* =====================================================
-   STRUKTUR ORGANISASI
-===================================================== */
-
+/* --- 4.4 Struktur Organisasi --- */
 .org-chart {
   margin-top: 2rem;
 }
@@ -1122,7 +1039,6 @@ footer a:hover {
   text-align: left;
 }
 
-/* Lines */
 .org-line.vertical {
   width: 2px;
   height: 40px;
@@ -1130,7 +1046,6 @@ footer a:hover {
   margin: 0.75rem auto;
 }
 
-/* Principle */
 .principle-box {
   background: linear-gradient(135deg, #1f3c88, #0d2b6b);
   padding: 2rem;
@@ -1149,17 +1064,7 @@ footer a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .org-level.three {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =====================================================
-   TUGAS & WEWENANG
-===================================================== */
-
+/* --- 4.5 Tugas & Wewenang --- */
 .tw-card {
   border-radius: 10px;
   padding: 1.25rem;
@@ -1240,7 +1145,7 @@ footer a:hover {
   justify-content: center;
 }
 
-/* CTA */
+/* CTA Tugas */
 .cta-tugas {
   background: linear-gradient(135deg, #1f3c88, #0d2b6b);
   color: #fff;
@@ -1249,43 +1154,538 @@ footer a:hover {
   text-align: center;
 }
 
-/* ================= KONTAK PAGE ================= */
+/* --- 4.6 Profil PPID Page --- */
+.main-content {
+  min-height: 60vh;
+}
 
-.kontak-item {
+.section-spacing {
+  margin: 2rem 0;
+}
+
+.ppid-alert {
+  background: #fff8e6;
+  border-left: 5px solid #d4a537;
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+/* Unit Wrapper */
+.unit-wrapper {
+  background: #f8fbff;
+  border-radius: 10px;
+  border-left: 5px solid #1f3c88;
+  padding: 1.5rem;
+}
+
+.unit-item {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
   display: flex;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.unit-item i {
+  color: #d4a537;
+}
+
+/* CTA Profil PPID */
+.cta-ppid {
+  background: linear-gradient(135deg, #1f3c88, #0d2b6b);
+  color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+}
+
+.cta-ppid p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.cta-ppid .btn {
+  background: #d4a537;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Peran & Tujuan */
+.box-peran {
+  background: #eef4ff;
+  border: 1px solid #d1e2ff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.box-tujuan {
+  background: #fff7e6;
+  border: 1px solid #f1e0b8;
+  border-radius: 10px;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.list-icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-icon li {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.list-icon i {
+  color: #1f3c88;
+}
+
+/* Ruang Lingkup */
+.scope-card {
+  background: #eef4ff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  border: 1px solid #d1e2ff;
+}
+
+.scope-card.warning {
+  background: #fff7e6;
+  border-color: #f1e0b8;
+}
+
+.scope-card h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f3c88;
+}
+
+.scope-card p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Responsive Visi Misi */
+@media (max-width: 768px) {
+  .visi-box {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-visi-misi-ui {
+    padding: 2rem 1.25rem;
+  }
+
+  .cta-visi-misi-ui h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .section-card h3,
+  .section-card h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .org-level.three {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+.section-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* =====================================================
+   BAGIAN 5: INFORMASI PUBLIK PAGES
+===================================================== */
+
+/* --- 5.1 Sidebar & Filter --- */
+.sidebar-card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-card h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f3c88;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: #f1f4f9;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #d4a537;
+  color: #fff;
+}
+
+/* --- 5.2 Statistik Card --- */
+.statistik-card {
+  background: #1f3c88;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.statistik-card h6 {
   margin-bottom: 1rem;
 }
 
-.kontak-item i {
-  font-size: 1.3rem;
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* --- 5.3 Info Tabs --- */
+.info-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.info-tabs a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.info-tabs a.active {
   color: #1f3c88;
-  margin-top: 4px;
+  border-bottom: 3px solid #d4a537;
 }
 
-.map-wrapper iframe {
-  border-radius: 8px;
-}
-
-.cta-box {
-  padding: 1.5rem;
+/* --- 5.4 Info Table --- */
+.info-table {
+  background: #fff;
   border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* ============================= */
-/* PERMOHONAN INFORMASI PAGE */
-/* ============================= */
-
-/* Perkecil judul section form */
-.section-title {
-  font-size: 20px;
+.info-header {
+  background: #1f3c88;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
   font-weight: 600;
-  margin-bottom: 5px;
-  color: #333;
+  font-size: 0.9rem;
 }
 
+.info-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.info-row:hover {
+  background: #f8fbff;
+}
+
+.info-row > div:first-child {
+  text-align: left;
+}
+
+.info-row > div:not(:first-child) {
+  text-align: center;
+}
+
+.info-row h6 {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.info-row small {
+  color: #6c757d;
+}
+
+.info-title h6 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.download-count {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.info-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.info-action i {
+  cursor: pointer;
+  margin-left: 6px;
+  color: #1f3c88;
+}
+
+/* Info Table Fix Final */
+.info-table {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e9f2;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.info-header {
+  display: grid;
+  grid-template-columns: 3fr 1.3fr 1fr 0.9fr 1fr;
+  background-color: #1f3c88;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px 12px;
+  font-size: 0.9rem;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 3fr 1.3fr 1fr 0.9fr 1fr;
+  padding: 18px 12px;
+  align-items: center;
+  border-top: 1px solid #eef1f7;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.download-count {
+  font-size: 12px;
+  color: #8a93a6;
+  margin-top: 6px;
+}
+
+/* Aksi Column */
+.aksi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.aksi a,
+.aksi i {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.aksi i {
+  font-size: 18px;
+  color: #2a5298;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.aksi i:hover {
+  color: #d4a537;
+  transform: scale(1.15);
+}
+
+/* --- 5.5 Content Box --- */
+.content-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.content-box h4 {
+  color: #1f3c88;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.content-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.info-highlight {
+  display: flex;
+  gap: 1rem;
+  background: #fdf8ee;
+  border-left: 5px solid #d4a537;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.info-highlight i {
+  font-size: 1.5rem;
+  color: #d4a537;
+}
+
+/* =====================================================
+   BAGIAN 6: LAYANAN INFORMASI PAGES
+===================================================== */
+
+/* --- 6.1 Layanan Informasi Page --- */
+.hero-section {
+  background: linear-gradient(135deg, #1e3c8f, #2952cc);
+  padding: 80px 0;
+}
+
+/* Info Box */
+.info-box {
+  background: #eaf1fb;
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.info-box i {
+  font-size: 35px;
+  background: #c89b3c;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+/* Service Card */
+.service-card {
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #d6d6d6;
+}
+
+.timeline-step {
+  position: relative;
+  text-align: center;
+}
+
+.timeline-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 30px;
+}
+
+.icon-blue {
+  background: #d9e7ff;
+  color: #2f5bd3;
+}
+
+.icon-gold {
+  background: #f4e3c3;
+  color: #c89b3c;
+}
+
+.icon-purple {
+  background: #eadcff;
+  color: #7a4dd8;
+}
+
+.icon-green {
+  background: #d9f5df;
+  color: #2e9b4b;
+}
+
+/* Important Box */
+.important-box {
+  background: #fdeaea;
+  border-left: 6px solid #c0392b;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+/* Download Card */
+.download-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- 6.2 Permohonan Informasi Page --- */
 .hero-page {
   background: linear-gradient(90deg, #1e3c72, #2a5298);
   color: #fff;
@@ -1358,10 +1758,8 @@ footer a:hover {
 .download-link i {
   margin-right: 6px;
 }
-/* ============================= */
-/* PENGAJUAN KEBERATAN PAGE */
-/* ============================= */
 
+/* --- 6.3 Pengajuan Keberatan Page --- */
 .hero-keberatan {
   background: linear-gradient(90deg, #8b0000, #c40000);
   color: #fff;
@@ -1380,340 +1778,275 @@ footer a:hover {
   background: #ffe5e5;
   border-left: 4px solid #c40000;
 }
-/* ===== layanan informasi ===== */
-/* ===== HERO ===== */
-.hero-section {
-  background: linear-gradient(135deg, #1e3c8f, #2952cc);
-  padding: 80px 0;
-}
 
-/* ===== INFO BOX ===== */
-.info-box {
-  background: #eaf1fb;
-  border-radius: 20px;
-  padding: 35px;
-  text-align: center;
-  transition: 0.3s;
-}
+/* =====================================================
+   BAGIAN 7: OTHER PAGES
+===================================================== */
 
-.info-box i {
-  font-size: 35px;
-  background: #2f5bd3;
-  color: #fff;
-  width: 70px;
-  height: 70px;
+/* --- 7.1 Kontak Page --- */
+.kontak-item {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 auto 15px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* ===== LAYANAN CARD ===== */
-.service-card {
-  border-radius: 20px;
-  padding: 35px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.kontak-item i {
+  font-size: 1.3rem;
+  color: #1f3c88;
+  margin-top: 4px;
 }
 
-.btn-gold {
-  background: #c89b3c;
-  color: #fff;
+.map-wrapper iframe {
+  border-radius: 8px;
 }
 
-.btn-gold:hover {
-  background: #b78a2f;
-  color: #fff;
-}
-
-/* ===== TIMELINE ===== */
-.timeline {
-  position: relative;
-  margin-top: 40px;
-}
-
-.timeline:before {
-  content: "";
-  position: absolute;
-  top: 45px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: #d6d6d6;
-}
-
-.timeline-step {
-  position: relative;
-  text-align: center;
-}
-
-.timeline-icon {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  font-size: 30px;
-}
-
-.icon-blue {
-  background: #d9e7ff;
-  color: #2f5bd3;
-}
-
-.icon-gold {
-  background: #f4e3c3;
-  color: #c89b3c;
-}
-
-.icon-purple {
-  background: #eadcff;
-  color: #7a4dd8;
-}
-
-.icon-green {
-  background: #d9f5df;
-  color: #2e9b4b;
-}
-
-/* ===== IMPORTANT BOX ===== */
-.important-box {
-  background: #f4ecdf;
-  border-left: 6px solid #c89b3c;
-  border-radius: 15px;
-  padding: 25px;
-}
-
-/* ===== DOWNLOAD ===== */
-.download-card {
-  border: 1px solid #e0e0e0;
+.cta-box {
+  padding: 1.5rem;
   border-radius: 12px;
-  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Kontak Fix Final */
+.kontak-item .icon-circle,
+.info-highlight .icon-circle {
+  background-color: #d4a537;
+  color: #ffffff !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.kontak-item i {
+  color: inherit !important;
+}
+
+.kontak-item strong {
+  color: #2a5298;
+  font-weight: 600;
+}
+
+.kontak-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.kontak-item p {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.kontak-item strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.95rem;
+}
+
+.info-highlight {
+  margin-top: 18px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* --- 7.2 Statistik Page --- */
+.page-header {
+  background: #fff;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.page-subtitle {
+  color: #6c757d;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
   justify-content: space-between;
-}
-/* ============================= */
-/* STATISTIK PAGE */
-/* ============================= */
-.page-header{
-background:#fff;
-padding:40px 0;
-border-bottom:1px solid #eee;
+  align-items: center;
 }
 
-.page-title{
-font-weight:700;
-color:#1e3c72;
+.stat-card h3 {
+  font-weight: 700;
+  margin: 5px 0;
 }
 
-.page-subtitle{
-color:#6c757d;
+.stat-card i {
+  font-size: 28px;
+  opacity: 0.6;
 }
 
-.stat-card{
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-display:flex;
-justify-content:space-between;
-align-items:center;
+.stat-card.blue {
+  border-top: 4px solid #2a5298;
 }
 
-.stat-card h3{
-font-weight:700;
-margin:5px 0;
+.stat-card.yellow {
+  border-top: 4px solid #f0ad4e;
 }
 
-.stat-card i{
-font-size:28px;
-opacity:0.6;
+.stat-card.green {
+  border-top: 4px solid #28a745;
 }
 
-.stat-card.blue{border-top:4px solid #1e3c72;}
-.stat-card.yellow{border-top:4px solid #f0ad4e;}
-.stat-card.green{border-top:4px solid #28a745;}
-.stat-card.red{border-top:4px solid #dc3545;}
+.stat-card.red {
+  border-top: 4px solid #dc3545;
+}
 
 .chart-card,
-.table-card{
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+.table-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
-/* Khusus mengecilkan pie chart */
+
 .pie-wrapper {
-  width: 250px;      /* Ubah ke 220px kalau mau lebih kecil lagi */
+  width: 250px;
   height: 250px;
-  margin: 0 auto;    /* Supaya tetap di tengah */
+  margin: 0 auto;
 }
 
 .pie-wrapper canvas {
   width: 100% !important;
   height: 100% !important;
 }
-/* =====================================================
-   PROFIL PPID PAGE FIX
-===================================================== */
 
-/* Main Content */
-.main-content {
-  min-height: 60vh;
+/* --- 7.3 Custom Dark Box --- */
+.custom-dark {
+  background-color: #ffffff;
+  color: black;
+  border-top: 4px solid #2a5298;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Section Card (Universal Card Modern) */
-.section-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  margin-bottom: 2rem;
-  transition: all 0.3s ease;
+.custom-dark .btn-primary {
+  background-color: #2a5298;
+  border-color: #2a5298;
 }
 
-.section-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+.custom-dark .btn-primary:hover {
+  background-color: #162e66;
+  border-color: #162e66;
 }
 
-/* Section Spacing */
-.section-spacing {
-  margin: 2rem 0;
-}
-
-/* Alert PPID */
-.ppid-alert {
-  background: #fff8e6;
-  border-left: 5px solid #d4a537;
-  padding: 1.25rem;
-  border-radius: 10px;
-}
-
-/* CTA Fix */
-.section-card[style*="linear-gradient"] {
-  border-radius: 16px;
-  padding: 2.5rem;
-}
-
-.section-card[style*="linear-gradient"] .btn {
-  background: #d4a537;
-  border: none;
-  font-weight: 600;
-  padding: 0.6rem 1.5rem;
-}
-
-.section-card[style*="linear-gradient"] .btn:hover {
-  background: #b8942f;
-}
-
-/* Unit Usaha Cards Hover */
-.section-card.text-center i {
-  transition: 0.3s;
-}
-
-.section-card.text-center:hover i {
-  transform: scale(1.1);
-}
-
-/* Responsive Improvement */
-@media (max-width: 768px) {
-  .section-card {
-    padding: 1.5rem;
-  }
-
-  .section-card h3,
-  .section-card h4 {
-    font-size: 1.2rem;
-  }
-}
-.section-card {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.section-card.animate {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.6s ease;
-}
-
-/* =====================================================
-   MODAL STYLING
-===================================================== */
-.detail-modal .modal-header {
-  background: #1f3c88;
+.cta-soft {
+  background-color: #477ede;
   color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.col-lg-3 .bi {
+  font-size: 1.1rem;
+  text-shadow: 0 0 0.5px #fff;
+}
+
+/* --- 7.4 FAQ Style 2 --- */
+.faq-section {
+  background: #f4f7fb;
+}
+
+.faq-wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.faq-style2 .accordion-item {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+
+.faq-style2 .accordion-item:last-child {
   border-bottom: none;
 }
 
-.detail-modal .modal-title {
+.faq-style2 {
+  counter-reset: faq-counter;
+}
+
+.faq-style2 .accordion-button::before {
+  counter-increment: faq-counter;
+  content: counter(faq-counter, decimal-leading-zero);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1f3c88;
+  margin-right: 15px;
+}
+
+.faq-style2 .accordion-button {
+  background: #ffffff;
+  color: #222;
   font-weight: 600;
-  font-size: 1.25rem;
-}
-
-.detail-modal .btn-close {
-  filter: invert(1);
-}
-
-.detail-modal .modal-body {
-  padding: 1.5rem;
-}
-
-.detail-modal .modal-content {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.detail-modal .info-label {
-  font-size: 0.85rem;
-  color: #6c757d;
-  margin-bottom: 0.25rem;
-}
-
-.detail-modal .info-value {
-  font-weight: 500;
-  color: #333;
-}
-
-.detail-modal .description-text {
-  line-height: 1.7;
-  color: #555;
-}
-
-.detail-modal .download-btn {
-  background: #1f3c88;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
+  font-size: 1rem;
+  padding: 1.3rem 1.5rem;
+  box-shadow: none;
   transition: all 0.3s ease;
 }
 
-.detail-modal .download-btn:hover {
-  background: #d4a537;
-  color: #fff;
+.faq-style2 .accordion-button::before {
+  color: #1f3c88;
+  transition: 0.3s ease;
 }
 
-.detail-modal .modal-footer {
-  border-top: 1px solid #eee;
-  padding: 1rem 1.5rem;
+.faq-style2 .accordion-button:not(.collapsed) {
+  background: #1f3c88;
+  color: #ffffff;
 }
 
-/* Modal animation */
-.detail-modal .modal.fade .modal-dialog {
-  transition: transform 0.3s ease-out;
+.faq-style2 .accordion-button:not(.collapsed)::before {
+  color: #ffffff;
 }
 
-.detail-modal .modal.show .modal-dialog {
-  transform: translate(0, 0);
+.faq-style2 .accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
 }
 
+.faq-style2 .accordion-button:focus {
+  box-shadow: none;
+}
 
+.faq-style2 .accordion-button::after {
+  background-size: 16px;
+  transition: 0.3s;
+}
+
+.faq-style2 .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.faq-style2 .accordion-body {
+  padding: 0 0 1.3rem 2.5rem;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   END OF STYLES
+===================================================== */
