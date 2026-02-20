@@ -23,9 +23,20 @@
   <nav class="topbar">
     <div class="container">
       <div class="d-flex justify-content-between w-100">
-        <span><i class="bi bi-envelope"></i> sekretariat@anindya.co.id | <i class="bi bi-telephone"></i> (0274)
-          451034</span>
-        <span><i class="bi bi-clock"></i> Senin – Jumat : 08.00 – 16.00 WIB</span>
+        <span class="contact-info">
+          <i class="bi bi-envelope icon-circle"></i>
+          sekretariat@anindya.co.id
+
+          <span class="divider">|</span>
+
+          <i class="bi bi-telephone icon-circle"></i>
+          (0274) 451034
+        </span>
+
+        <span>
+          <i class="bi bi-clock"></i>
+          Senin – Jumat : <span style="font-weight: bold;">08.00 – 16.00 WIB </span>
+        </span>
       </div>
     </div>
   </nav>
@@ -35,7 +46,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold" style="color: #fff;">
         <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40" class="me-2">
-        PPID PT AMI
+        <span style="font-size: 22px;">PPID PT AMI</span>
       </a>
 
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -126,7 +137,8 @@
             <span class="input-group-text bg-white border-end-0">
               <i class="bi bi-search"></i>
             </span>
-            <input type="text" class="form-control border-start-0" placeholder="Cari pengumuman...">
+            <input style="font-style: italic;" type="text" class="form-control border-start-0"
+              placeholder="Cari pengumuman...">
           </div>
         </div>
         <div class="col-md-3">
@@ -147,124 +159,139 @@
         </div>
       </div>
 
-      <!-- All Announcements -->
       <div class="d-flex flex-column gap-3">
-        <!-- Announcement 1 -->
+
         <div class="card shadow-sm border-0 rounded-3 p-4">
-          <div class="row g-3 align-items-center">
+          <div class="row g-4 align-items-center">
             <div class="col-auto">
-              <div class="bg-primary text-white rounded-3 text-center p-2" style="width: 70px; min-height: 70px;">
-                <div class="small fw-bold">JAN</div>
-                <div class="fw-bold fs-4">20</div>
-                <div class="small">2026</div>
+              <div
+                class="bg-primary text-white rounded-3 text-center d-flex flex-column justify-content-center shadow-sm"
+                style="width: 90px; height: 90px;">
+                <div class="small fw-bold text-uppercase">Jan</div>
+                <div class="fw-bold fs-2 lh-1">20</div>
+                <div style="font-size: 0.75rem;">2026</div>
               </div>
             </div>
             <div class="col">
               <span class="badge bg-warning text-dark mb-2">Informasi Layanan</span>
-              <h5 class="card-title text-primary mb-2" style="font-size: 1.1rem;">Informasi Pemeliharaan Sistem Layanan
-                PPID</h5>
-              <p class="card-text text-muted mb-2">Pemeliharaan sistem akan dilakukan pada tanggal 25 Januari 2026 pukul
-                22.00 WIB hingga 26 Januari 2026 pukul 04.00 WIB. Kami mohon pengertian dan kesabaranannya.</p>
+              <h5 class="card-title text-primary mb-2" style="font-size: 1.2rem;">Informasi Pemeliharaan Sistem
+                Layanan PPID</h5>
+              <p class="card-text text-muted mb-2">Pemeliharaan sistem akan dilakukan pada tanggal 25 Januari 2026
+                pukul 22.00 WIB hingga 26 Januari 2026 pukul 04.00 WIB.</p>
               <div class="d-flex gap-3">
-                <a href="#" class="text-warning text-decoration-none fw-semibold">Selengkapnya →</a>
+                <a href="#" class="text-decoration-none fw-semibold" style="color: goldenrod;" data-bs-toggle="modal"
+                  data-bs-target="#detailModal" data-title="Informasi Pemeliharaan Sistem Layanan PPID"
+                  data-category="Informasi Layanan" data-date="20 Jan 2026" data-views="245"
+                  data-desc="Pemeliharaan sistem rutin dilakukan untuk meningkatkan stabilitas layanan e-PPID PT AMI. Selama masa pemeliharaan, akses ke permohonan informasi akan dinonaktifkan sementara.">Selengkapnya
+                  →</a>
                 <span class="text-muted"><i class="bi bi-eye me-1"></i> 245 dilihat</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Announcement 2 -->
         <div class="card shadow-sm border-0 rounded-3 p-4">
-          <div class="row g-3 align-items-center">
+          <div class="row g-4 align-items-center">
             <div class="col-auto">
-              <div class="bg-primary text-white rounded-3 text-center p-2" style="width: 70px; min-height: 70px;">
-                <div class="small fw-bold">JAN</div>
-                <div class="fw-bold fs-4">18</div>
-                <div class="small">2026</div>
+              <div
+                class="bg-primary text-white rounded-3 text-center d-flex flex-column justify-content-center shadow-sm"
+                style="width: 90px; height: 90px;">
+                <div class="small fw-bold text-uppercase">Jan</div>
+                <div class="fw-bold fs-2 lh-1">18</div>
+                <div style="font-size: 0.75rem;">2026</div>
               </div>
             </div>
             <div class="col">
               <span class="badge bg-info text-dark mb-2">Laporan</span>
-              <h5 class="card-title text-primary mb-2" style="font-size: 1.1rem;">Laporan Kinerja PT AMI Tahun 2025</h5>
+              <h5 class="card-title text-primary mb-2" style="font-size: 1.2rem;">Laporan Kinerja PT AMI Tahun 2025
+              </h5>
               <p class="card-text text-muted mb-2">Laporan kinerja tahunan PT Anindya Mitra Internasional tahun 2025
-                telah tersedia untuk diunduh. Dokumen ini mencakup pencapaian target, realisasi anggaran, dan rencana
-                strategis tahun mendatang.</p>
+                telah tersedia untuk diunduh.</p>
               <div class="d-flex gap-3">
-                <a href="#" class="text-warning text-decoration-none fw-semibold">Selengkapnya →</a>
+                <a href="#" class="text-decoration-none fw-semibold" style="color: goldenrod;" data-bs-toggle="modal"
+                  data-bs-target="#detailModal" data-title="Laporan Kinerja PT AMI Tahun 2025" data-category="Laporan"
+                  data-date="18 Jan 2026" data-views="189"
+                  data-desc="Dokumen ini berisi pencapaian target strategis perusahaan selama tahun 2025, termasuk realisasi anggaran dan evaluasi kinerja setiap divisi.">Selengkapnya
+                  →</a>
                 <span class="text-muted"><i class="bi bi-eye me-1"></i> 189 dilihat</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Announcement 3 -->
         <div class="card shadow-sm border-0 rounded-3 p-4">
-          <div class="row g-3 align-items-center">
+          <div class="row g-4 align-items-center">
             <div class="col-auto">
-              <div class="bg-primary text-white rounded-3 text-center p-2" style="width: 70px; min-height: 70px;">
-                <div class="small fw-bold">JAN</div>
-                <div class="fw-bold fs-4">15</div>
-                <div class="small">2026</div>
+              <div
+                class="bg-primary text-white rounded-3 text-center d-flex flex-column justify-content-center shadow-sm"
+                style="width: 90px; height: 90px;">
+                <div class="small fw-bold text-uppercase">Jan</div>
+                <div class="fw-bold fs-2 lh-1">15</div>
+                <div style="font-size: 0.75rem;">2026</div>
               </div>
             </div>
             <div class="col">
               <span class="badge bg-success text-white mb-2">Pengumuman Resmi</span>
-              <h5 class="card-title text-primary mb-2" style="font-size: 1.1rem;">Prosedur Baru Permohonan Informasi
+              <h5 class="card-title text-primary mb-2" style="font-size: 1.2rem;">Prosedur Baru Permohonan Informasi
                 Publik</h5>
-              <p class="card-text text-muted mb-2">Tata cara permohonan informasi publik telah diperbarui sesuai dengan
-                peraturan terbaru. Pemohon informasi dapat mengajukan permohonan secara online melalui sistem e-PPID
-                atau langsung ke kantor PPID.</p>
+              <p class="card-text text-muted mb-2">Tata cara permohonan informasi publik telah diperbarui sesuai
+                dengan peraturan terbaru.</p>
               <div class="d-flex gap-3">
-                <a href="#" class="text-warning text-decoration-none fw-semibold">Selengkapnya →</a>
+                <a href="#" class="text-decoration-none fw-semibold" style="color: goldenrod;" data-bs-toggle="modal"
+                  data-bs-target="#detailModal" data-title="Prosedur Baru Permohonan Informasi Publik"
+                  data-category="Pengumuman Resmi" data-date="15 Jan 2026" data-views="312"
+                  data-desc="Perubahan ini mencakup waktu respon yang lebih cepat dan kemudahan verifikasi data diri bagi pemohon informasi online.">Selengkapnya
+                  →</a>
                 <span class="text-muted"><i class="bi bi-eye me-1"></i> 312 dilihat</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Announcement 4 -->
         <div class="card shadow-sm border-0 rounded-3 p-4">
-          <div class="row g-3 align-items-center">
+          <div class="row g-4 align-items-center">
             <div class="col-auto">
-              <div class="bg-primary text-white rounded-3 text-center p-2" style="width: 70px; min-height: 70px;">
-                <div class="small fw-bold">JAN</div>
-                <div class="fw-bold fs-4">10</div>
-                <div class="small">2026</div>
+              <div
+                class="bg-primary text-white rounded-3 text-center d-flex flex-column justify-content-center shadow-sm"
+                style="width: 90px; height: 90px;">
+                <div class="small fw-bold text-uppercase">Jan</div>
+                <div class="fw-bold fs-2 lh-1">10</div>
+                <div style="font-size: 0.75rem;">2026</div>
               </div>
             </div>
             <div class="col">
               <span class="badge bg-warning text-dark mb-2">Informasi Layanan</span>
-              <h5 class="card-title text-primary mb-2" style="font-size: 1.1rem;">Jadwal Libur Nasional Tahun 2026</h5>
-              <p class="card-text text-muted mb-2">Berikut adalah jadwal libur nasional dan cuti bersama tahun 2026 yang
-                dapat mempengaruhi layanan PPID. Layanan akan kembali normal pada hari kerja berikutnya.</p>
+              <h5 class="card-title text-primary mb-2" style="font-size: 1.2rem;">Jadwal Libur Nasional Tahun 2026
+              </h5>
+              <p class="card-text text-muted mb-2">Berikut adalah jadwal libur nasional dan cuti bersama tahun 2026
+                yang mempengaruhi layanan.</p>
               <div class="d-flex gap-3">
-                <a href="#" class="text-warning text-decoration-none fw-semibold">Selengkapnya →</a>
+                <a href="#" class="text-decoration-none fw-semibold" style="color: goldenrod;" data-bs-toggle="modal"
+                  data-bs-target="#detailModal" data-title="Jadwal Libur Nasional Tahun 2026"
+                  data-category="Informasi Layanan" data-date="10 Jan 2026" data-views="156"
+                  data-desc="Layanan fisik di kantor PPID akan diliburkan sesuai kalender nasional. Namun, permohonan online tetap dapat diajukan dan akan diproses pada hari kerja.">Selengkapnya
+                  →</a>
                 <span class="text-muted"><i class="bi bi-eye me-1"></i> 156 dilihat</span>
               </div>
             </div>
           </div>
         </div>
 
-
-      <!-- Pagination -->
-      <nav aria-label="Page navigation" class="mt-4">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Sebelumnya</a>
-          </li>
-          <li class="page-item active"><a class="page-link" href="#"
-              style="background-color: #1f3c88; border-color: #1f3c88;">1</a></li>
-          <li class="page-item"><a class="page-link" href="#" style="color: #1f3c88;">2</a></li>
-          <li class="page-item"><a class="page-link" href="#" style="color: #1f3c88;">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" style="color: #1f3c88;">Selanjutnya</a>
-          </li>
-        </ul>
-      </nav>
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#">Sebelumnya</a></li>
+            <li class="page-item active"><a class="page-link" href="#"
+                style="background-color: #1f3c88; border-color: #1f3c88;">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" style="color: #1f3c88;">2</a></li>
+            <li class="page-item"> <a class="page-link" href="#" style="color: #1f3c88;">Selanjutnya</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ================= FOOTER ================= -->
   <footer>
     <div class="container">
       <div class="row g-4">
@@ -272,32 +299,38 @@
         <div class="col-lg-3 col-md-6">
           <div class="d-flex align-items-center mb-3">
             <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40">
-            <h5 class="mb-0">PPID PT AMI</h5>
+            <h5 class="mb-0" style="padding-left: 4%;">PPID PT AMI</h5>
           </div>
           <p class="text-white-50 small">
             Pejabat Pengelola Informasi dan Dokumentasi PT Anindya Mitra
             Internasional berkomitmen memberikan layanan informasi publik
             yang transparan, akuntabel, dan profesional.
           </p>
-          <div class="d-flex justify-content gap-3">
-            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white fs-4"
-              title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white fs-4"
-              title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X"
-              style="display: flex; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16">
+          <div class="social-icons d-flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white"
+              title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.055-4.425 5.055H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
               </svg>
             </a>
-            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white fs-4"
-              title="TikTok"><i class="bi bi-tiktok"></i></a>
+
+            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
           </div>
+
         </div>
         <!-- MENU -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 7%;">
           <h6>Menu</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html">Beranda</a></li>
@@ -309,7 +342,7 @@
           </ul>
         </div>
         <!-- LAYANAN -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 2%;">
           <h6>Layanan</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="permohonan-informasi.html">Permohonan Informasi</a></li>
@@ -406,6 +439,40 @@
     });
     scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    // Logika untuk mengisi satu modal dengan data yang berbeda-beda
+    document.addEventListener('DOMContentLoaded', function () {
+      const detailModal = document.getElementById('detailModal');
+
+      if (detailModal) {
+        detailModal.addEventListener('show.bs.modal', function (event) {
+          // Tombol yang memicu modal
+          const button = event.relatedTarget;
+
+          // Ambil data dari atribut data- yang ada di tombol
+          const title = button.getAttribute('data-title');
+          const category = button.getAttribute('data-category');
+          const date = button.getAttribute('data-date');
+          const views = button.getAttribute('data-views');
+          const desc = button.getAttribute('data-desc');
+
+          // Isi konten modal berdasarkan ID yang sudah Anda buat sebelumnya
+          detailModal.querySelector('#modalTitle').textContent = title;
+          detailModal.querySelector('#modalCategory').textContent = category;
+          detailModal.querySelector('#modalDate').textContent = date;
+          detailModal.querySelector('#modalSize').textContent = views + " dilihat";
+          detailModal.querySelector('#modalDescription').textContent = desc;
+
+          // Atur warna badge kategori di dalam modal agar sesuai
+          const badge = detailModal.querySelector('#modalCategory');
+          badge.className = 'badge me-2'; // Reset
+          if (category === 'Laporan') badge.classList.add('bg-info', 'text-dark');
+          else if (category === 'Pengumuman Resmi') badge.classList.add('bg-success');
+          else badge.classList.add('bg-warning', 'text-dark');
+        });
+      }
     });
   </script>
 
