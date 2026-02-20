@@ -23,9 +23,20 @@
   <nav class="topbar">
     <div class="container">
       <div class="d-flex justify-content-between w-100">
-        <span><i class="bi bi-envelope"></i> sekretariat@anindya.co.id | <i class="bi bi-telephone"></i> (0274)
-          451034</span>
-        <span><i class="bi bi-clock"></i> Senin – Jumat : 08.00 – 16.00 WIB</span>
+        <span class="contact-info">
+          <i class="bi bi-envelope icon-circle"></i>
+          sekretariat@anindya.co.id
+
+          <span class="divider">|</span>
+
+          <i class="bi bi-telephone icon-circle"></i>
+          (0274) 451034
+        </span>
+
+        <span>
+          <i class="bi bi-clock"></i>
+          Senin – Jumat : <span style="font-weight: bold;">08.00 – 16.00 WIB </span>
+        </span>
       </div>
     </div>
   </nav>
@@ -35,7 +46,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold" style="color: #fff;">
         <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40" class="me-2">
-        PPID PT AMI
+        <span style="font-size: 22px;">PPID PT AMI</span>
       </a>
 
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -100,6 +111,7 @@
     </div>
   </nav>
 
+
   <!-- HEADER SECTION -->
   <section class="page-header">
     <div class="container d-flex justify-content-between align-items-center">
@@ -109,7 +121,7 @@
           Ringkasan data dan statistik permohonan informasi publik
         </p>
       </div>
-      <a href="#" class="btn btn-primary">
+      <a href="#" class="btn btn-kirim">
         <i class="bi bi-download"></i> Unduh Laporan
       </a>
     </div>
@@ -122,7 +134,7 @@
       <div class="row g-4 mb-4">
 
         <div class="col-lg-3 col-md-6">
-          <div class="stat-card blue">
+          <div class="stat-card blue section-card">
             <div>
               <p>Total Permohonan</p>
               <h3>1,247</h3>
@@ -133,7 +145,7 @@
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="stat-card yellow">
+          <div class="stat-card yellow section-card">
             <div>
               <p>Permohonan Diproses</p>
               <h3>87</h3>
@@ -144,7 +156,7 @@
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="stat-card green">
+          <div class="stat-card green section-card">
             <div>
               <p>Permohonan Selesai</p>
               <h3>1,098</h3>
@@ -155,7 +167,7 @@
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="stat-card red">
+          <div class="stat-card red section-card">
             <div>
               <p>Pengajuan Keberatan</p>
               <h3>62</h3>
@@ -171,36 +183,36 @@
       <div class="row g-4 mb-4">
 
         <div class="col-lg-6">
-          <div class="chart-card">
+          <div class="chart-card section-card">
             <h5>Permohonan per Bulan</h5>
             <canvas id="barChart"></canvas>
           </div>
         </div>
         <div class="col-lg-6">
-        <div class="chart-card">
-          <h3>Distribusi Status Permohonan</h3>
-          <div class="pie-wrapper">
-            <canvas id="pieChart"></canvas>
+          <div class="chart-card section-card">
+            <h3>Distribusi Status Permohonan</h3>
+            <div class="pie-wrapper">
+              <canvas id="pieChart"></canvas>
+            </div>
           </div>
         </div>
-      </div>
 
       </div>
 
       <!-- TABLE -->
-      <div class="table-card">
+      <div class="table-card section-card">
         <h5 class="mb-3">Permohonan Terbaru</h5>
 
         <div class="table-responsive">
           <table class="table align-middle">
             <thead>
               <tr>
-                <th>No. Permohonan</th>
-                <th>Pemohon</th>
-                <th>Jenis Informasi</th>
-                <th>Kategori</th>
-                <th>Tanggal</th>
-                <th>Status</th>
+                <th style="width: 12%;">No. Permohonan</th>
+                <th style="width: 18%;">Pemohon</th>
+                <th style="width: 18%;">Jenis Informasi</th>
+                <th style="width: 18%;">Kategori</th>
+                <th style="width: 12%;">Tanggal</th>
+                <th style="width: 12%;">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -268,7 +280,6 @@
     </div>
   </section>
 
-
   <!-- ================= FOOTER ================= -->
   <footer>
     <div class="container">
@@ -277,32 +288,38 @@
         <div class="col-lg-3 col-md-6">
           <div class="d-flex align-items-center mb-3">
             <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40">
-            <h5 class="mb-0">PPID PT AMI</h5>
+            <h5 class="mb-0" style="padding-left: 4%;">PPID PT AMI</h5>
           </div>
           <p class="text-white-50 small">
             Pejabat Pengelola Informasi dan Dokumentasi PT Anindya Mitra
             Internasional berkomitmen memberikan layanan informasi publik
             yang transparan, akuntabel, dan profesional.
           </p>
-          <div class="d-flex justify-content gap-3">
-            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white fs-4"
-              title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white fs-4"
-              title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X"
-              style="display: flex; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16">
+          <div class="social-icons d-flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white"
+              title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.055-4.425 5.055H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
               </svg>
             </a>
-            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white fs-4"
-              title="TikTok"><i class="bi bi-tiktok"></i></a>
+
+            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
           </div>
+
         </div>
         <!-- MENU -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 7%;">
           <h6>Menu</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html">Beranda</a></li>
@@ -314,7 +331,7 @@
           </ul>
         </div>
         <!-- LAYANAN -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 2%;">
           <h6>Layanan</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="permohonan-informasi.html">Permohonan Informasi</a></li>
@@ -372,6 +389,40 @@
     });
     scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    // Scroll to top functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', function () {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (window.pageYOffset > 300) {
+        scrollButton.classList.add('show');
+      } else {
+        scrollButton.classList.remove('show');
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.section-card').forEach(el => {
+      observer.observe(el);
     });
   </script>
   <script>
