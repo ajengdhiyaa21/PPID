@@ -19,14 +19,24 @@
 </head>
 
 <body>
-
   <!-- ===== TOPBAR ===== -->
   <nav class="topbar">
     <div class="container">
       <div class="d-flex justify-content-between w-100">
-        <span><i class="bi bi-envelope"></i> sekretariat@anindya.co.id | <i class="bi bi-telephone"></i> (0274)
-          451034</span>
-        <span><i class="bi bi-clock"></i> Senin – Jumat : 08.00 – 16.00 WIB</span>
+        <span class="contact-info">
+          <i class="bi bi-envelope icon-circle"></i>
+          sekretariat@anindya.co.id
+
+          <span class="divider">|</span>
+
+          <i class="bi bi-telephone icon-circle"></i>
+          (0274) 451034
+        </span>
+
+        <span>
+          <i class="bi bi-clock"></i>
+          Senin – Jumat : <span style="font-weight: bold;">08.00 – 16.00 WIB </span>
+        </span>
       </div>
     </div>
   </nav>
@@ -36,7 +46,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold" style="color: #fff;">
         <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40" class="me-2">
-        PPID PT AMI
+        <span style="font-size: 22px;">PPID PT AMI</span>
       </a>
 
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -101,6 +111,7 @@
     </div>
   </nav>
 
+
   <!-- ===== HERO ===== -->
   <section class="hero-section text-white text-center">
     <div class="container">
@@ -113,45 +124,45 @@
   </section>
 
   <!-- ===== INFO BOX ===== -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row g-4">
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
 
-      <div class="col-md-3">
-        <div class="info-box h-100 d-flex flex-column">
-          <i class="bi bi-clock"></i>
-          <h6 class="fw-bold">Waktu Pemrosesan</h6>
-          <small>Maksimal 10 hari kerja</small>
+        <div class="col-md-3">
+          <div class="org-card outline info-box h-100 d-flex flex-column section-card">
+            <i class="bi bi-clock"></i>
+            <h5 class="fw-bold" style="color:#1f3c88 ;">Waktu Pemrosesan</h5>
+            <medium class="text-muted">Maksimal 10 hari kerja</medium>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="info-box h-100 d-flex flex-column">
-          <i class="bi bi-telephone"></i>
-          <h6 class="fw-bold">Hotline</h6>
-          <small>(0274) 451034 / (0274) 451035</small>
+        <div class="col-md-3">
+          <div class="org-card outline info-box h-100 d-flex flex-column section-card">
+            <i class="bi bi-telephone"></i>
+            <h5 class="fw-bold" style="color:#1f3c88 ;">Hotline</h5>
+            <medium>(0274) 451034 / (0274) 451035</medium>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="info-box h-100 d-flex flex-column">
-          <i class="bi bi-envelope"></i>
-          <h6 class="fw-bold">Email</h6>
-          <small>sekretariat@anindya.co.id</small>
+        <div class="col-md-3">
+          <div class="org-card outline info-box h-100 d-flex flex-column section-card">
+            <i class="bi bi-envelope"></i>
+            <h5 class="fw-bold" style="color:#1f3c88 ;">Email</h5>
+            <medium>sekretariat@anindya.co.id</medium>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="info-box h-100 d-flex flex-column">
-          <i class="bi bi-geo-alt"></i>
-          <h6 class="fw-bold">Lokasi</h6>
-          <small>Kompleks JEC Jl Janti KM.4, Gedongkuning, Banguntapan, Bantul, Yogyakarta, 55198</small>
+        <div class="col-md-3">
+          <div class="org-card outline info-box h-100 d-flex flex-column section-card">
+            <i class="bi bi-geo-alt"></i>
+            <h5 class="fw-bold" style="color:#1f3c88 ;">Lokasi</h5>
+            <medium>Kompleks JEC Jl Janti KM.4, Gedongkuning, Banguntapan, Bantul, Yogyakarta, 55198</medium>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===== SERVICE CARD ===== -->
   <section class="pb-5">
@@ -159,16 +170,16 @@
       <div class="row g-4">
 
         <div class="col-md-6">
-          <div class="service-card bg-white border-top border-4 border-warning">
-            <h5 class="fw-bold mb-3">Permohonan Informasi Publik</h5>
+          <div class="service-card bg-white border-top border-4 border-warning section-card">
+            <h5 class="fw-bold mb-3" style="color:goldenrod ;">Permohonan Informasi Publik</h5>
             <p>Ajukan permohonan untuk memperoleh informasi publik yang Anda butuhkan dengan mudah dan cepat.</p>
             <a href="permohonan-informasi.html" class="btn btn-gold px-4">Ajukan Permohonan →</a>
           </div>
         </div>
 
         <div class="col-md-6">
-          <div class="service-card bg-white border-top border-4 border-primary">
-            <h5 class="fw-bold mb-3">Pengajuan Keberatan Informasi</h5>
+          <div class="service-card custom-dark section-card">
+            <h5 class="fw-bold mb-3" style="color:#1f3c88 ;">Pengajuan Keberatan Informasi</h5>
             <p>Sampaikan keberatan apabila permohonan informasi Anda ditolak atau tidak ditanggapi dengan tepat.</p>
             <a href="pengajuan-keberatan.html" class="btn btn-primary px-4">Ajukan Keberatan →</a>
           </div>
@@ -181,7 +192,7 @@
   <!-- ===== TIMELINE ===== -->
   <section class="py-5 bg-light text-center">
     <div class="container">
-      <h4 class="fw-bold mb-2">Alur Layanan Informasi</h4>
+      <h3 class="fw-bold mb-2" style="color:#1f3c88 ;">Alur Layanan Informasi</h3>
       <p class="text-muted mb-5">Proses pengajuan dilakukan melalui 4 tahapan utama</p>
 
       <div class="row timeline">
@@ -213,9 +224,9 @@
   <!-- ===== INFORMASI PENTING ===== -->
   <section class="py-5">
     <div class="container">
-      <div class="important-box">
+      <div class="important-box section-card">
         <h6 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Informasi Penting</h6>
-        <ul>
+        <ul style="padding-left: 3%;">
           <li>Formulir harus diisi lengkap dan jelas</li>
           <li>Waktu pelayanan maksimal 10 hari kerja</li>
           <li>Jika ditolak, pemohon akan menerima pemberitahuan tertulis</li>
@@ -225,41 +236,40 @@
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="pb-5">
+  <!-- ===== FAQ STYLE ELEGANT ===== -->
+  <section class="faq-section py-5">
     <div class="container">
-      <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
-        <h4 class="fw-bold mb-4">
-          Pertanyaan yang Sering Diajukan (FAQ)
-        </h4>
+      <div class="faq-wrapper p-4 p-md-5 section-card">
 
-        <div class="accordion" id="faqAccordion">
+        <h3 class="fw-bold mb-4 text-center" style="color:#1f3c88 ;">
+          Pertanyaan yang Sering Diajukan (FAQ)
+        </h3>
+
+        <div class="accordion faq-style2" id="faqAccordion">
 
           <!-- 1 -->
-          <div class="accordion-item border-0 border-bottom">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                 Berapa lama waktu pemrosesan permohonan informasi?
               </button>
             </h2>
             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="padding-top: 1%; padding-left: 5%;">
                 Waktu pelayanan maksimal 10 hari kerja sejak permohonan diterima secara lengkap dan benar.
               </div>
             </div>
           </div>
 
           <!-- 2 -->
-          <div class="accordion-item border-0 border-bottom">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                 Apakah ada biaya untuk mengajukan permohonan informasi?
               </button>
             </h2>
             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="padding-top: 1%; padding-left: 5%;">
                 Tidak dipungut biaya. Namun apabila diperlukan penggandaan dokumen fisik,
                 biaya penggandaan menjadi tanggung jawab pemohon.
               </div>
@@ -267,15 +277,14 @@
           </div>
 
           <!-- 3 -->
-          <div class="accordion-item border-0 border-bottom">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                 Bagaimana cara mengajukan keberatan jika permohonan ditolak?
               </button>
             </h2>
             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="padding-top: 1%; padding-left: 5%;">
                 Pemohon dapat mengajukan keberatan melalui formulir keberatan informasi
                 yang tersedia pada halaman ini dalam jangka waktu yang telah ditentukan.
               </div>
@@ -283,15 +292,14 @@
           </div>
 
           <!-- 4 -->
-          <div class="accordion-item border-0 border-bottom">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
                 Dokumen apa saja yang dibutuhkan untuk permohonan informasi?
               </button>
             </h2>
             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="padding-top: 1%; padding-left: 5%;">
                 Pemohon wajib melampirkan identitas diri yang sah serta mengisi formulir
                 permohonan secara lengkap dan jelas.
               </div>
@@ -299,15 +307,14 @@
           </div>
 
           <!-- 5 -->
-          <div class="accordion-item border-0 border-bottom">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
                 Apakah saya bisa mengajukan permohonan secara online?
               </button>
             </h2>
             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="padding-top: 1%; padding-left: 5%;">
                 Ya, permohonan dapat diajukan secara online melalui tombol
                 "Ajukan Permohonan" pada halaman ini.
               </div>
@@ -315,15 +322,14 @@
           </div>
 
           <!-- 6 -->
-          <div class="accordion-item border-0">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
                 Apa yang terjadi jika permohonan tidak ditanggapi?
               </button>
             </h2>
             <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
+              <div class="accordion-body" style="padding-top: 1%; padding-left: 5%;">
                 Apabila permohonan tidak ditanggapi dalam jangka waktu yang ditentukan,
                 pemohon berhak mengajukan keberatan kepada PPID.
               </div>
@@ -335,56 +341,60 @@
     </div>
   </section>
 
+
+
   <!-- ===== DOWNLOAD FORMULIR ===== -->
   <section class="pb-5">
     <div class="container">
-      <h4 class="fw-bold mb-3">Download Formulir</h4>
-      <p class="text-muted mb-4">
-        Jika Anda mengajukan permohonan secara offline, silakan unduh formulir berikut,
-        lengkapi, dan kirimkan ke kantor PPID kami.
-      </p>
+      <div class="section-card">
+        <h4 class="fw-bold mb-3" style="color:#1f3c88 ;">Download Formulir</h4>
+        <p class="text-muted mb-4">
+          Jika Anda mengajukan permohonan secara offline, silakan unduh formulir berikut,
+          lengkapi, dan kirimkan ke kantor PPID kami.
+        </p>
 
-      <div class="row g-3">
+        <div class="row g-3">
 
-        <div class="col-md-4">
-          <div class="download-card">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
-              <div>
-                <strong>Form Permohonan</strong><br>
-                <small>PDF | 245 KB</small>
+          <div class="col-md-4">
+            <div class="download-card section-card">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                <div>
+                  <strong>Form Permohonan</strong><br>
+                  <small>PDF | 245 KB</small>
+                </div>
               </div>
+              <i class="bi bi-download text-primary fs-5"></i>
             </div>
-            <i class="bi bi-download text-primary fs-5"></i>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="download-card">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
-              <div>
-                <strong>Form Keberatan</strong><br>
-                <small>PDF | 196 KB</small>
+          <div class="col-md-4">
+            <div class="download-card section-card">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                <div>
+                  <strong>Form Keberatan</strong><br>
+                  <small>PDF | 196 KB</small>
+                </div>
               </div>
+              <i class="bi bi-download text-primary fs-5"></i>
             </div>
-            <i class="bi bi-download text-primary fs-5"></i>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="download-card">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
-              <div>
-                <strong>Form Sengketa</strong><br>
-                <small>PDF | 187 KB</small>
+          <div class="col-md-4">
+            <div class="download-card section-card">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                <div>
+                  <strong>Form Sengketa</strong><br>
+                  <small>PDF | 187 KB</small>
+                </div>
               </div>
+              <i class="bi bi-download text-primary fs-5"></i>
             </div>
-            <i class="bi bi-download text-primary fs-5"></i>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </section>
@@ -397,29 +407,38 @@
         <div class="col-lg-3 col-md-6">
           <div class="d-flex align-items-center mb-3">
             <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40">
-            <h5 class="mb-0">PPID PT AMI</h5>
+            <h5 class="mb-0" style="padding-left: 4%;">PPID PT AMI</h5>
           </div>
           <p class="text-white-50 small">
             Pejabat Pengelola Informasi dan Dokumentasi PT Anindya Mitra
             Internasional berkomitmen memberikan layanan informasi publik
             yang transparan, akuntabel, dan profesional.
           </p>
-          <div class="d-flex justify-content gap-3">
-            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white fs-4" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white fs-4" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X"
-              style="display: flex; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16">
+          <div class="social-icons d-flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white"
+              title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.055-4.425 5.055H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
               </svg>
             </a>
-            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white fs-4" title="TikTok"><i class="bi bi-tiktok"></i></a>
+
+            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
           </div>
+
         </div>
         <!-- MENU -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 7%;">
           <h6>Menu</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html">Beranda</a></li>
@@ -431,7 +450,7 @@
           </ul>
         </div>
         <!-- LAYANAN -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 2%;">
           <h6>Layanan</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="permohonan-informasi.html">Permohonan Informasi</a></li>
@@ -486,6 +505,40 @@
     });
     scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    // Scroll to top functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', function () {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (window.pageYOffset > 300) {
+        scrollButton.classList.add('show');
+      } else {
+        scrollButton.classList.remove('show');
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.section-card').forEach(el => {
+      observer.observe(el);
     });
   </script>
 
