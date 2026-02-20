@@ -23,9 +23,20 @@
   <nav class="topbar">
     <div class="container">
       <div class="d-flex justify-content-between w-100">
-        <span><i class="bi bi-envelope"></i> sekretariat@anindya.co.id | <i class="bi bi-telephone"></i> (0274)
-          451034</span>
-        <span><i class="bi bi-clock"></i> Senin – Jumat : 08.00 – 16.00 WIB</span>
+        <span class="contact-info">
+          <i class="bi bi-envelope icon-circle"></i>
+          sekretariat@anindya.co.id
+
+          <span class="divider">|</span>
+
+          <i class="bi bi-telephone icon-circle"></i>
+          (0274) 451034
+        </span>
+
+        <span>
+          <i class="bi bi-clock"></i>
+          Senin – Jumat : <span style="font-weight: bold;">08.00 – 16.00 WIB </span>
+        </span>
       </div>
     </div>
   </nav>
@@ -35,7 +46,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center fw-bold" style="color: #fff;">
         <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40" class="me-2">
-        PPID PT AMI
+        <span style="font-size: 22px;">PPID PT AMI</span>
       </a>
 
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -100,6 +111,7 @@
     </div>
   </nav>
 
+
   <!-- HERO -->
   <section class="hero-keberatan">
     <div class="container">
@@ -132,16 +144,16 @@
         <div class="col-lg-4">
           <div class="info-card">
 
-            <h5 class="fw-bold mb-4">Informasi Penting</h5>
+            <h5 class="fw-bold mb-4" style="color: #1f3c88;">Informasi Penting</h5>
 
-            <div class="info-box red">
-              <strong>Batas Waktu</strong>
-              <p style="text-align: left;">Keberatan diajukan maksimal 30 hari kerja sejak permohonan ditolak</p>
+            <div class="info-box red" style="text-align: left;">
+              <strong style="font-size: medium;">Batas Waktu</strong>
+              <p>Keberatan diajukan maksimal 30 hari kerja sejak permohonan ditolak</p>
             </div>
 
-            <div class="info-box blue">
-              <strong>Alasan Keberatan</strong>
-              <ul style="text-align: left;">
+            <div class="info-box blue" style="text-align: left;">
+              <strong style="font-size: medium;">Alasan Keberatan</strong>
+              <ul style="padding-left: 6%;">
                 <li>Permohonan ditolak</li>
                 <li>Informasi tidak diberikan</li>
                 <li>Permintaan diabaikan</li>
@@ -150,28 +162,28 @@
               </ul>
             </div>
 
-            <div class="info-box yellow">
-              <strong>Proses Penyelesaian</strong>
+            <div class="info-box yellow" style="text-align: left;">
+              <strong style="font-size: medium;">Proses Penyelesaian</strong>
               <p style="text-align: left;">Atasan PPID akan memberikan tanggapan tertulis maksimal 30 hari kerja</p>
             </div>
 
-            <div class="info-box green">
-              <strong>Dokumen Diperlukan</strong>
-              <ul style="text-align: left;">
+            <div class="info-box green" style="text-align: left;">
+              <strong style="font-size: medium;">Dokumen Diperlukan</strong>
+              <ul style="padding-left: 6%;">
                 <li>Nomor registrasi permohonan</li>
                 <li>Surat penolakan (jika ada)</li>
                 <li>Bukti identitas</li>
               </ul>
             </div>
 
-            <div class="info-box purple">
-              <strong>Kontak Bantuan</strong>
-              <p style="text-align: left;">Email: sekretariat@anindya.co.id<br>Telp: (0274) 451034 / (0274) 451035</p>
+            <div class="info-box purple" style="text-align: left;">
+              <strong style="font-size: medium;">Kontak Bantuan</strong>
+              <p>Email : sekretariat@anindya.co.id<br>Telp&nbsp;&nbsp; : (0274) 451034 / (0274) 451035</p>
             </div>
 
             <hr>
 
-            <h6 class="fw-bold">Unduh Formulir</h6>
+            <h6 class="fw-bold" style="color: #1f3c88;">Unduh Formulir</h6>
             <a href="#" class="download-link">
               <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
               Form Keberatan (PDF)
@@ -184,12 +196,10 @@
         <div class="col-lg-8">
           <div class="form-card">
 
-            <h4 class="fw-bold mb-4">Formulir Pengajuan Keberatan</h4>
-
-            <h6 class="section-title">A. Data Pemohon Keberatan</h6>
+            <h4 class="fw-bold mb-4" style="color: #1f3c88;">Formulir Pengajuan Keberatan</h4>
             <hr class="red-line">
 
-            <div class="row g-3">
+            <div class="row g-3 mb-3">
               <div class="col-md-6">
                 <label>Nama Lengkap<span style="color: red;">*</span></label>
                 <input type="text" class="form-control" required>
@@ -221,10 +231,7 @@
               </div>
             </div>
 
-            <h6 class="section-title mt-4">B. Data Permohonan Informasi Sebelumnya</h6>
-            <hr class="red-line">
-
-            <div class="row g-3">
+            <div class="row g-3 mb-3">
               <div class="col-md-6">
                 <label>Nomor Registrasi<span style="color: red;">*</span></label>
                 <input type="text" class="form-control" required>
@@ -236,42 +243,41 @@
               </div>
             </div>
 
-            <h6 class="section-title mt-4">C. Rincian Informasi</h6>
-            <hr class="gold-line">
-            <label>Deskripsi Informasi<span style="color: red;">*</span></label>
-            <textarea class="form-control mb-3" rows="4" required></textarea>
+            <div class="mb-3">
+              <label>Deskripsi Informasi<span style="color: red;">*</span></label>
+              <textarea class="form-control mb-3" rows="4" required></textarea>
+            </div>
 
-            <label>Tujuan Penggunaan Informasi <span style="color: red;">*</span></label>
-            <textarea class="form-control" rows="3" required></textarea>
+            <div class="mb-3">
+              <label>Tujuan Penggunaan Informasi <span style="color: red;">*</span></label>
+              <textarea class="form-control" rows="3" required></textarea>
+            </div>
 
-            <h6 class="section-title mt-4">D. Jenis dan Alasan Keberatan</h6>
-            <hr class="red-line">
+            <div class="mb-3">
+              <label>Jenis Keberatan<span style="color: red;">*</span></label>
+              <select class="form-control mb-3" required>
+                <option>Pilih Jenis Keberatan</option>
+                <option>Permohonan Ditolak</option>
+                <option>Tidak Ditanggapi</option>
+                <option>Informasi Tidak Lengkap</option>
+                <option>Biaya Tidak Wajar</option>
+              </select>
+            </div>
 
-            <label>Jenis Keberatan<span style="color: red;">*</span></label>
-            <select class="form-control mb-3" required>
-              <option>Pilih Jenis Keberatan</option>
-              <option>Permohonan Ditolak</option>
-              <option>Tidak Ditanggapi</option>
-              <option>Informasi Tidak Lengkap</option>
-              <option>Biaya Tidak Wajar</option>
-            </select>
+            <div class="mb-3">
+              <label>Alasan Keberatan<span style="color: red;">*</span></label>
+              <textarea class="form-control mb-3" rows="4" required></textarea>
+            </div>
 
-            <label>Alasan Keberatan<span style="color: red;">*</span></label>
-            <textarea class="form-control mb-3" rows="4" required></textarea>
+            <div class="mb-3">
+              <label>Upload Surat Penolakan<span style="color: red;">*</span></label>
+              <input type="file" class="form-control mb-3" required>
+            </div>
 
-            <!-- <h6 class="section-title mt-4">D. Kasus Posisi</h6>
-            <hr class="red-line">
-            <textarea class="form-control mb-3" rows="5"></textarea> -->
-
-            <h6 class="section-title mt-4">E. Dokumen Pendukung</h6>
-            <hr class="red-line">
-
-            <label>Upload Surat Penolakan<span style="color: red;">*</span></label>
-            <input type="file" class="form-control mb-3" required>
-
-            <label>Upload KTP/Identitas<span style="color: red;">*</span></label>
-            <input type="file" class="form-control mb-4" required>
-
+            <div class=" mb-3">
+              <label>Upload KTP/Identitas<span style="color: red;">*</span></label>
+              <input type="file" class="form-control mb-4" required>
+            </div>
             <div class="d-flex gap-3 flex-wrap">
               <button class="btn btn-danger btn-lg px-5">
                 Ajukan Keberatan
@@ -288,7 +294,6 @@
     </div>
   </section>
 
-
   <!-- ================= FOOTER ================= -->
   <footer>
     <div class="container">
@@ -297,32 +302,38 @@
         <div class="col-lg-3 col-md-6">
           <div class="d-flex align-items-center mb-3">
             <img src="assets/image/logoami.png" alt="Logo PT AMI" width="40" height="40">
-            <h5 class="mb-0">PPID PT AMI</h5>
+            <h5 class="mb-0" style="padding-left: 4%;">PPID PT AMI</h5>
           </div>
           <p class="text-white-50 small">
             Pejabat Pengelola Informasi dan Dokumentasi PT Anindya Mitra
             Internasional berkomitmen memberikan layanan informasi publik
             yang transparan, akuntabel, dan profesional.
           </p>
-          <div class="d-flex justify-content gap-3">
-            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white fs-4"
-              title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white fs-4"
-              title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X"
-              style="display: flex; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16">
+          <div class="social-icons d-flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=100007043508618" class="text-white" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ptanindya_official?igsh=Y3QyM2R1b3U1dzA3" class="text-white"
+              title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/ptanindya_ofc?t=cMtqe5MRoiBPmVobgwXlCw&s=09" class="text-white" title="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.055-4.425 5.055H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
               </svg>
             </a>
-            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white fs-4"
-              title="TikTok"><i class="bi bi-tiktok"></i></a>
+
+            <a href="https://www.tiktok.com/@ptanindya_official?_t=8jHwebcJQlF&_r=1" class="text-white" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
           </div>
+
         </div>
         <!-- MENU -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 7%;">
           <h6>Menu</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html">Beranda</a></li>
@@ -334,7 +345,7 @@
           </ul>
         </div>
         <!-- LAYANAN -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6" style="padding-left: 2%;">
           <h6>Layanan</h6>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="permohonan-informasi.html">Permohonan Informasi</a></li>
